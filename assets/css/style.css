@@ -1301,7 +1301,7 @@ Hero
 
 #hero {
   background: url(../images/hero-img.png) no-repeat right top 50px !important;
-  background-size: contain;
+  background-size: 450px !important;
 }
 
 .module-hero {
@@ -1340,7 +1340,7 @@ Hero
 }
 
 .mh-line-size-1 {
-	letter-spacing: 50px;
+	letter-spacing: 30px;
 	font-size: 30px;
 	opacity: 0.9;
 }
@@ -2065,6 +2065,7 @@ Responsive Media Querries
 
 @media (min-width: 768px) {
 
+
 	/* Comments */
 
 	.comment .comment {
@@ -2079,7 +2080,6 @@ Responsive Media Querries
 	/* Hero captions */
 
 	.mh-line-size-1 {
-		letter-spacing: 40px;
 		font-size: 26px;
 	}
 
@@ -2138,6 +2138,11 @@ Responsive Media Querries
 @media (max-width: 767px) {
 
 	/* Hero captions */
+
+	#hero {
+		background-size: 400px !important;
+		height: 100vh !important;
+	}
 
 	.mh-line-size-1 {
 		letter-spacing: 24px;
@@ -2202,6 +2207,11 @@ Responsive Media Querries
 @media (max-width: 500px) {
 
 	/* Hero captions */
+
+	#hero {
+		background: url(../images/hero-img.png) no-repeat center !important;
+		background-size: 300px !important;	
+	}
 
 	.mh-line-size-1 {
 		letter-spacing: 12px;
