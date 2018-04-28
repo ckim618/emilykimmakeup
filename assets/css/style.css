@@ -2213,6 +2213,10 @@ Responsive Media Querries
 		background-size: 300px !important;	
 	}
 
+	.m-b-50 {
+		margin-bottom: 25px !important;
+	}
+
 	.mh-line-size-1 {
 		letter-spacing: 12px;
 		font-size: 26px;
