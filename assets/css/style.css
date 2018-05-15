@@ -2248,6 +2248,10 @@ Responsive Media Querries
 
 	/* Portfolio grid */
 
+	#portfolio {
+		padding: 0;
+	}
+
 	.work-item,
 	.grid-sizer {
 		width: 100%;
