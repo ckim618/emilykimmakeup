@@ -1299,11 +1299,6 @@ Navigation
 Hero
 ------------------------------------------------------------------- */
 
-#hero {
-  background: url(../images/hero-img.png) no-repeat right top 50px !important;
-  background-size: 450px !important;
-}
-
 .module-hero {
 	position: relative;
 	background-repeat: no-repeat;
@@ -2207,11 +2202,6 @@ Responsive Media Querries
 @media (max-width: 500px) {
 
 	/* Hero captions */
-
-	#hero {
-		background: url(../images/hero-img.png) no-repeat center !important;
-		background-size: 300px !important;	
-	}
 
 	.m-b-50 {
 		margin-bottom: 25px !important;
