@@ -5,7 +5,7 @@
 	$subject = "Emily Kim Hair & Makeup";
 
 	// You can put here your email
-	$header = "From: noreply@vortex.com\r\n";
+	$header = "From: ckim618@gmail.com\r\n";
 	$header.= "MIME-Version: 1.0\r\n";
 	$header.= "Content-Type: text/plain; charset=utf-8\r\n";
 	$header.= "X-Priority: 1\r\n";
