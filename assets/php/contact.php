@@ -1,5 +1,5 @@
 <?php
-echo("here");
+print("here");
 	// Mail settings
 	$to      = "ckim618@gmail.com";
 	$subject = "Emily Kim Hair and Makeup";
