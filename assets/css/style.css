@@ -1447,7 +1447,7 @@ Modules
 
 .module,
 .module-small {
-	padding: 140px 0;
+	padding: 50px 0;
 	position: relative;
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -1480,7 +1480,7 @@ Modules
 	letter-spacing: 10px;
 	text-align: center;
 	font-size: 18px;
-	margin-bottom: 70px;
+	margin-bottom: 25px;
 }
 
 .module-subtitle {
@@ -2192,11 +2192,11 @@ Responsive Media Querries
 	}
 
 	/*----------------------------*/
-	.navbar-custom {
+	/* .navbar-custom {
 		position: absolute;
 		top: 0;
 		width: 100%;
-	}
+	} */
 
 }
 
@@ -2262,6 +2262,12 @@ Responsive Media Querries
 		width: 100%;
 	}
 
+	#icons-navbar {
+		display: initial !important;
+		position: fixed;
+    right: 16px;
+    top: 5px;
+	}
 }
 
 @media (max-width: 500px) {
@@ -2529,4 +2535,14 @@ Multi-columns-row
 
 #contact-form {
 	padding: 0 20px;
+}
+
+.footer-contact p {
+	text-align: center;
+	font-size: 18px;
+	font-family: 'dosis', sans-serif;
+}
+
+#icons-navbar {
+	display: none;
 }

@@ -36,9 +36,9 @@
 		});
 
 		$(window).scroll(function() {
-			if(windowWidth > 960) {
+			// if(windowWidth > 960) {
 				navbarAnimation(navbar, moduleHero);
-			}
+			// }
 		}).scroll();
 
 		/* ---------------------------------------------- /*
