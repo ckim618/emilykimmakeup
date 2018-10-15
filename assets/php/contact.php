@@ -2,7 +2,7 @@
 
 	// Mail settings
 	$to      = "ckim618@gmail.com";
-	$subject = "Emily Kim Hair & Makeup";
+	$subject = "Emily Kim Hair and Makeup";
 
 	// You can put here your email
 	$header = "From: ckim618@gmail.com\r\n";
