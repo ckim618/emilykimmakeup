@@ -18,7 +18,7 @@ function countImg() {
 
 function addInfo() {
   var email = 'emilykimmakeup@gmail.com';
-  var phone = '909-615-3532';
+  var phone = '951-708-0201';
   $('.email').attr('href', 'mailTo:' + email).text(email);
   $('.phone').attr('href', 'tel:' + phone).text(phone);
 }
