@@ -9,7 +9,8 @@ function initialize() {
 function countImg() {
   var hair = $('.hair').length;
   var makeup = $('.makeup').length;
-  var all = parseInt(hair) + parseInt(makeup);
+  // Minused one because one photo has both classes
+  var all = parseInt(hair) + parseInt(makeup) - 1;
   $('.hair-count').text(hair);
   $('.makeup-count').text(makeup);
   $('.current-count').text(all);
@@ -29,8 +30,5 @@ function clickHandlers() {
     $('html, body').animate({
       scrollTop: $($.attr(this, 'href')).offset().top
     }, 500);
-  });
-  $('.work-item img').on('click', function() {
-    console.log('clicked');
   });
 }
