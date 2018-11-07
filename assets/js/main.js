@@ -9,8 +9,9 @@ function initialize() {
 function countImg() {
   var hair = $('.hair').length;
   var makeup = $('.makeup').length;
+  var combo = $('.hair.makeup').length;
   // Minus one because 2 photo has both classes
-  var all = parseInt(hair) + parseInt(makeup) - 2;
+  var all = parseInt(hair) + parseInt(makeup) - combo;
   $('.hair-count').text(hair);
   $('.makeup-count').text(makeup);
   $('.current-count').text(all);
