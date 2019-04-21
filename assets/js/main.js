@@ -4,6 +4,7 @@ function initialize() {
   countImg();
   addInfo();
   clickHandlers();
+  lazyLoad(); 
 }
 
 function countImg() {
@@ -32,4 +33,11 @@ function clickHandlers() {
       scrollTop: $($.attr(this, 'href')).offset().top
     }, 500);
   });
+}
+
+function lazyLoad() {
+  var lazyLoadInstance = new LazyLoad({
+    elements_selector: ".lazy"
+    // ... more custom settings?
+});
 }
