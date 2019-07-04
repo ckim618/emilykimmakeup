@@ -1,0 +1,41 @@
+/* ------------------------------------ *\
+    #PAGE
+\* ------------------------------------ */
+
+//
+// HTML
+//
+html {
+    color: color('base');
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    background: #fff;
+    font-family: $workSans;
+
+    &:global(.is-scroll-locked) {
+        overflow: hidden;
+    }
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+p {
+    font-size: rem(16px);
+
+    @include media('md') {
+        font-size: rem(19px);
+    }
+}
