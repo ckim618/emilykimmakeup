@@ -1,0 +1,39 @@
+$gray: #f7f7f7;
+$light-gray: #777;
+
+.footer {
+    padding: 50px 0;
+    background: $gray;
+}
+
+.inner {
+    max-width: 750px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    text-align: center;
+}
+
+.row {
+    color: $light-gray;
+    font-size: rem(12px);
+    font-family: 'Open Sans';
+    padding: 0 15px;
+}
+
+.socialInner {
+    padding: 0;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+}
+
+.social {
+    display: inline-block;
+    margin: 0 10px 20px;
+    text-transform: uppercase;
+}
+
+.copyright {
+    font-size: rem(12px);
+    margin-bottom: 0;
+}

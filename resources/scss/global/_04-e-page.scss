@@ -6,7 +6,6 @@
 // HTML
 //
 html {
-    color: color('base');
     font-family: $base-font-family;
     font-size: $base-font-size;
     line-height: $base-line-height;
@@ -16,7 +15,8 @@ html {
 
 body {
     background: #fff;
-    font-family: $workSans;
+    font-family: $base-font-family;
+    color: $base-color;
 
     &:global(.is-scroll-locked) {
         overflow: hidden;
