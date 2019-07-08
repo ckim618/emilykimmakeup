@@ -6,7 +6,7 @@ const Hero = ({ img, header, subHeader }) => {
     }
 
     return (
-        <section className={css.hero} style={heroBg}>
+        <section id="home" className={css.hero} style={heroBg}>
             <div className={css.inner}>
                 <h1 className={css.header}>{header}</h1>
                 <h5 className={css.subHeader}>{subHeader}</h5>

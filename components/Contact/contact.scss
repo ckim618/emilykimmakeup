@@ -1,0 +1,19 @@
+.container {
+    font-size: rem(18px);
+    padding: 50px 15px;
+    text-align: center;
+}
+
+.header {
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    margin-bottom: 25px;
+    font-weight: 400;
+}
+
+.info {        
+    display: block;
+    margin-bottom: 20px;
+    font-size: rem(18px);
+    color: rgba(17, 17, 17, 0.55);
+}

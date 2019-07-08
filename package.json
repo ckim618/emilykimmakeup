@@ -23,6 +23,8 @@
     "react": "^16.8.6",
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^16.8.6",
+    "react-images": "^1.0.0",
+    "react-photo-gallery": "^8.0.0",
     "sass-resources-loader": "^2.0.1",
     "stylelint": "^10.1.0",
     "stylelint-config-standard": "^18.3.0",

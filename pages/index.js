@@ -1,9 +1,12 @@
 import Layout from '../components/Layout';
 import Hero from "../components/Hero";
 import client from '../contentful';
+import PhotoGallery from '../components/PhotoGallery';
 import '../resources/scss/global.scss';
+import Contact from '../components/Contact';
 
-const Home = ({page}) => {
+
+const Home = ({ page }) => {
     const {
         heroBackgroundImage: {
             fields: {
@@ -11,8 +14,12 @@ const Home = ({page}) => {
             }
         },
         heroText,
-        heroSubText
+        heroSubText,
+        photoGallery,
+        phoneNumber,
+        email,
     } = page;
+
 
     return (
         <Layout>
@@ -20,6 +27,13 @@ const Home = ({page}) => {
                 img={url}
                 header={heroText}
                 subHeader={heroSubText}
+            />
+            <PhotoGallery 
+                photoGallery={photoGallery}
+            />
+            <Contact 
+                phone={phoneNumber}
+                email={email}
             />
         </Layout>
     );
