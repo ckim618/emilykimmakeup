@@ -1,6 +1,7 @@
 import React, { useState, useCallback } from "react";
 import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway } from "react-images";
+import NoSSR from 'react-no-ssr';
 import css from './photogallery.scss';
 
 const PhotoGallery = ({ photoGallery }) => {
@@ -44,21 +45,23 @@ const PhotoGallery = ({ photoGallery }) => {
 
     return (
         <section id="work" className={css.container}>
-            <Gallery photos={photoArr} onClick={openLightbox} />
-            <ModalGateway>
-                {viewerIsOpen ? (
-                    <Modal onClose={closeLightbox}>
-                        <Carousel
-                            currentIndex={currentImage}
-                            views={photoArr.map(x => ({
-                                ...x,
-                                srcset: x.srcSet,
-                                caption: x.workedon
-                            }))}
-                        />
-                    </Modal>
-                ) : null}
-            </ModalGateway>
+            <NoSSR>
+                <Gallery photos={photoArr} onClick={openLightbox} />
+                <ModalGateway>
+                    {viewerIsOpen ? (
+                        <Modal onClose={closeLightbox}>
+                            <Carousel
+                                currentIndex={currentImage}
+                                views={photoArr.map(x => ({
+                                    ...x,
+                                    srcset: x.srcSet,
+                                    caption: x.workedon
+                                }))}
+                            />
+                        </Modal>
+                    ) : null}
+                </ModalGateway>
+            </NoSSR>
         </section>
     );
 }
