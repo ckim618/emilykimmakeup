@@ -1,19 +1,26 @@
 .container {
-    font-size: rem(18px);
     padding: 50px 15px;
+    font-size: rem(18px);
     text-align: center;
 }
 
 .header {
-    text-transform: uppercase;
-    letter-spacing: 10px;
     margin-bottom: 25px;
     font-weight: 400;
+    letter-spacing: 10px;
+    text-transform: uppercase;
 }
 
-.info {        
+.info {
     display: block;
+    cursor: pointer;
     margin-bottom: 20px;
-    font-size: rem(18px);
+    border-bottom: 0;
     color: rgba(17, 17, 17, 0.55);
+    font-size: rem(18px);
+    transition: all 0.3s;
+
+    &:hover {
+        color: rgba(17, 17, 17, 1);
+    }
 }

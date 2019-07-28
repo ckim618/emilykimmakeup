@@ -7,22 +7,22 @@ $light-gray: #777;
 }
 
 .inner {
-    max-width: 750px;
-    width: 100%;
     margin: 0 auto;
     padding: 0 15px;
+    width: 100%;
+    max-width: 750px;
     text-align: center;
 }
 
 .row {
+    padding: 0 15px;
     color: $light-gray;
     font-size: rem(12px);
-    padding: 0 15px;
 }
 
 .socialInner {
-    padding: 0;
     margin-bottom: 20px;
+    padding: 0;
     letter-spacing: 3px;
 }
 
@@ -30,9 +30,18 @@ $light-gray: #777;
     display: inline-block;
     margin: 0 10px 20px;
     text-transform: uppercase;
+
+    a {
+        color: $light-gray;
+        transition: all 0.3s;
+
+        &:hover {
+            color: #000;
+        }
+    }
 }
 
 .copyright {
-    font-size: rem(12px);
     margin-bottom: 0;
+    font-size: rem(12px);
 }
