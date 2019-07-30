@@ -67,7 +67,9 @@ class ContactForm extends React.Component {
                 className={css.form}
                 method="post"
                 data-netlify-="true"
+                data-netlify-honeypot="bot-field"
                 onSubmit={this.handleSubmit}
+                name="contact"
             >
                 {/* You still need to add the hidden input with the form name to your JSX form */}
                 <input type="hidden" name="form-name" value="contact" />
