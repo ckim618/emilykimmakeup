@@ -1,0 +1,43 @@
+//
+// Settings
+//
+@import '~normalize.css';
+@import 'global/01-s-variables';
+@import 'global/01-s-breakpoints';
+
+//
+// Imports
+//
+@import 'imports';
+
+//
+// Generic
+//
+@import 'global/03-g-border-box';
+@import 'global/03-g-fonts';
+
+//
+// Elements
+//
+@import 'global/04-e-page';
+@import 'global/04-e-type';
+@import 'global/04-e-images';
+@import 'global/04-e-forms';
+
+//
+// Utilities
+//
+:global {
+    @import 'global/07-u-colors';
+    @import 'global/07-u-type';
+    @import 'global/07-u-images';
+    @import 'global/07-u-spacing';
+    @import 'global/07-u-visibility';
+
+    .react-photo-gallery--gallery {
+        margin: 0 auto;
+        padding: 0 15px;
+        width: 100%;
+        max-width: 1920px;
+    }
+}

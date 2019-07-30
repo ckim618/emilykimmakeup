@@ -1,0 +1,36 @@
+/* ------------------------------------ *\
+    #PAGE
+\* ------------------------------------ */
+
+//
+// HTML
+//
+html {
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    background: #fff;
+    font-family: $base-font-family;
+    color: $base-color;
+
+    &:global(.is-scroll-locked) {
+        overflow: hidden;
+    }
+}
+
+ul {
+    list-style-type: none;
+}
+
+p {
+    font-size: rem(16px);
+
+    @include media('md') {
+        font-size: rem(19px);
+    }
+}

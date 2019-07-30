@@ -1,0 +1,50 @@
+.nav {
+    display: block;
+    margin-bottom: 20px;
+    padding: 5px 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.isScrolled {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+    transition: all 0.5s ease;
+}
+
+.inner {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 auto;
+    padding: 15px 0;
+    width: 100%;
+    max-width: 1920px;
+
+    a {
+        margin: 0 15px;
+        padding: 15px 0 5px 0;
+        color: $base-color;
+        font-size: rem(10px);
+        letter-spacing: 2px;
+        position: relative;
+
+        &::before {
+            content: '';
+            width: 0;
+            height: 1px;
+            background-color: rgba(#000, 0.55);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transition: all 0.2s ease-out;
+        }
+
+        &:hover::before,
+        &:focus::before {
+            width: 100%;
+        }
+    }
+}

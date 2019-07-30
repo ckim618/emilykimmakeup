@@ -1,0 +1,48 @@
+$gray: #f7f7f7;
+$light-gray: #777;
+
+.footer {
+    padding: 50px 0;
+    background: $gray;
+}
+
+.inner {
+    margin: 0 auto;
+    padding: 0 15px;
+    width: 100%;
+    max-width: 750px;
+    text-align: center;
+}
+
+.row {
+    padding: 0 15px;
+    color: $light-gray;
+    font-size: rem(12px);
+}
+
+.socialInner {
+    margin-bottom: 20px;
+    padding: 0;
+    letter-spacing: 3px;
+}
+
+.social {
+    display: inline-block;
+    margin: 0 10px 20px;
+    text-transform: uppercase;
+
+    a {
+        color: $light-gray;
+        transition: all 0.3s;
+
+        &:hover,
+        &:focus {
+            color: #000;
+        }
+    }
+}
+
+.copyright {
+    margin-bottom: 0;
+    font-size: rem(12px);
+}
