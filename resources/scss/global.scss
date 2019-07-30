@@ -33,4 +33,11 @@
     @import 'global/07-u-images';
     @import 'global/07-u-spacing';
     @import 'global/07-u-visibility';
+
+    .react-photo-gallery--gallery {
+        margin: 0 auto;
+        padding: 0 15px;
+        width: 100%;
+        max-width: 1920px;
+    }
 }

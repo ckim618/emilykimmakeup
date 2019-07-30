@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import client from '../contentful';
 import '../resources/scss/global.scss';
 
@@ -5,6 +6,7 @@ import Layout from '../components/Layout';
 import Hero from '../components/Hero';
 import PhotoGallery from '../components/PhotoGallery';
 import Contact from '../components/Contact';
+import ContactForm from '../components/ContactForm';
 
 const Home = ({ page }) => {
     const {
@@ -22,9 +24,14 @@ const Home = ({ page }) => {
 
     return (
         <Layout>
+            <Head>
+                <title>Emily Kim Makeup</title>
+                <link rel="shortcut icon" href="/static/img/brush.png" />
+            </Head>
             <Hero img={url} header={heroText} subHeader={heroSubText} />
             <PhotoGallery photoGallery={photoGallery} />
             <Contact phone={phoneNumber} email={email} />
+            <ContactForm />
         </Layout>
     );
 };

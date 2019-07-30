@@ -2,6 +2,7 @@ import React, { useState, useCallback } from 'react';
 import Gallery from 'react-photo-gallery';
 import Carousel, { Modal, ModalGateway } from 'react-images';
 import css from './photogallery.scss';
+import uniqid from 'uniqid';
 
 import Photos from '../Photos';
 
@@ -37,13 +38,13 @@ const PhotoGallery = ({ photoGallery }) => {
             width: imageSize === 'Tall' ? 3 : imageSize === 'Wide' ? 4 : 1,
             height: imageSize === 'Tall' ? 4 : imageSize === 'Wide' ? 3 : 1,
             workedon: workedOn,
-            key: photo.sys.id,
+            key: uniqid(),
             id: i,
         };
     });
 
     const photoRenderer = useCallback(({ photo }) => {
-        return <Photos photo={photo} lightBox={openLightbox} />;
+        return <Photos key={uniqid()} photo={photo} lightBox={openLightbox} />;
     }, []);
 
     return (

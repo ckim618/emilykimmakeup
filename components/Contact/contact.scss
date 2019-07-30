@@ -1,5 +1,5 @@
 .container {
-    padding: 50px 15px;
+    padding: 50px 15px 5px 15px;
     font-size: rem(18px);
     text-align: center;
 }
@@ -11,16 +11,21 @@
     text-transform: uppercase;
 }
 
-.info {
-    display: block;
-    cursor: pointer;
+.infoContainer {
     margin-bottom: 20px;
+    color: rgba(17, 17, 17, 0.55);
+}
+
+.info {
+    cursor: pointer;
+    margin-left: 5px;
     border-bottom: 0;
     color: rgba(17, 17, 17, 0.55);
     font-size: rem(18px);
     transition: all 0.3s;
 
-    &:hover {
+    &:hover,
+    &:focus {
         color: rgba(17, 17, 17, 1);
     }
 }

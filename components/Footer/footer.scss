@@ -35,7 +35,8 @@ $light-gray: #777;
         color: $light-gray;
         transition: all 0.3s;
 
-        &:hover {
+        &:hover,
+        &:focus {
             color: #000;
         }
     }

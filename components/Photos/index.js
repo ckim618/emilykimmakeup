@@ -10,7 +10,7 @@ const Photos = React.memo(({ photo = {}, lightBox }) => {
                 lightBox(id);
             }}
         >
-            <img {...photo} />
+            <img loading="lazy" {...photo} />
             <div className={css.caption}>
                 <h3 className={css.title}>{workedon}</h3>
             </div>

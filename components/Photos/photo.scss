@@ -34,7 +34,8 @@
     transition: all 0.3s cubic-bezier(0.3, 0.1, 0.58, 1);
     opacity: 0;
 
-    .photo:hover & {
+    .photo:hover &,
+    .photo:focus & {
         opacity: 1;
         top: 50%;
         transform: translateY(-50%);
