@@ -23,6 +23,19 @@ export default class MyDocument extends Document {
                 <body>
                     <Main />
                     <NextScript />
+                    <form
+                        name="contact-form"
+                        method="post"
+                        data-netlify-="true"
+                        netlify
+                        data-netlify-honeypot="bot-field"
+                    >
+                        <input
+                            type="hidden"
+                            name="form-name"
+                            value="contact-form"
+                        />
+                    </form>
                 </body>
             </html>
         );
