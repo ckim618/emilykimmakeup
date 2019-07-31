@@ -23,10 +23,10 @@ module.exports = withSass({
         return config;
     },
 
-    async exportPathMap() {
-        const paths = {
-            '/': { page: '/' },
-        };
-        return paths;
-    },
+    // async exportPathMap() {
+    //     const paths = {
+    //         '/': { page: '/' },
+    //     };
+    //     return paths;
+    // },
 });
