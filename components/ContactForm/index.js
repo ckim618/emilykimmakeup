@@ -61,7 +61,7 @@ class ContactForm extends React.Component {
         ]);
 
         return (
-            <NetlifyForm name="Contact Form">
+            <NetlifyForm name="contact-form">
                 {({ loading, error, success }) => (
                     <div>
                         {loading && <div>Loading...</div>}
@@ -74,6 +74,11 @@ class ContactForm extends React.Component {
                         {success && <div>Thank you for contacting us!</div>}
                         {!loading && !success && (
                             <div className={css.form}>
+                                <input
+                                    type="hidden"
+                                    name="form-name"
+                                    value="contact-form"
+                                />
                                 <input
                                     className={css.input}
                                     placeholder="Name"
