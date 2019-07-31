@@ -12,12 +12,12 @@ const Contact = ({ phone, email }) => {
                     {phone}
                 </a>
             </div>
-            {/* <div className={css.infoContainer}>
+            <div className={css.infoContainer}>
                 Email:
                 <a href={emailRef} className={css.info}>
                     {email}
                 </a>
-            </div> */}
+            </div>
         </section>
     );
 };
