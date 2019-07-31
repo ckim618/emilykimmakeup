@@ -19,9 +19,6 @@ class ContactForm extends React.Component {
             message: '',
             formSuccess: false,
         };
-
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     /* Here’s the juicy bit for posting the form submission */
@@ -71,7 +68,6 @@ class ContactForm extends React.Component {
                 onSubmit={this.handleSubmit}
                 name="contact"
             >
-                {/* You still need to add the hidden input with the form name to your JSX form */}
                 <input type="hidden" name="form-name" value="contact" />
                 <div className={css.inner}>
                     <p className={css.inputContainer}>

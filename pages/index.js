@@ -26,7 +26,6 @@ const Home = ({ page }) => {
         <Layout>
             <Head>
                 <title>Emily Kim Makeup</title>
-                <link rel="shortcut icon" href="/static/img/brush.png" />
             </Head>
             <Hero img={url} header={heroText} subHeader={heroSubText} />
             <PhotoGallery photoGallery={photoGallery} />
