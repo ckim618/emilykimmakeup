@@ -28,7 +28,6 @@ export default class MyDocument extends Document {
                         method="POST"
                         action="post"
                         data-netlify-="true"
-                        netlify
                         data-netlify-honeypot="bot-field"
                     >
                         <input
