@@ -1,5 +1,5 @@
 .photo {
-    display: block;
+    display: none;
     cursor: pointer;
     margin: 2px;
     position: relative;
@@ -48,9 +48,14 @@
     font-size: 14px;
     font-weight: 400;
     opacity: 0;
+    text-transform: uppercase;
 
     .photo:hover & {
         color: #111;
         opacity: 1;
     }
+}
+
+.show {
+    display: block;
 }

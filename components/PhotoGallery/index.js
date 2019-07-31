@@ -7,8 +7,12 @@ import uniqid from 'uniqid';
 import Photos from '../Photos';
 
 const PhotoGallery = ({ photoGallery }) => {
+    let makeupCount = 0;
+    let hairCount = 0;
+
     const [currentImage, setCurrentImage] = useState(0);
     const [viewerIsOpen, setViewerIsOpen] = useState(false);
+    const [filterImg, setFilterImg] = useState('');
 
     const openLightbox = id => {
         setCurrentImage(id);
@@ -33,6 +37,15 @@ const PhotoGallery = ({ photoGallery }) => {
             },
         } = photo;
 
+        if (workedOn === 'Makeup') {
+            makeupCount++;
+        } else if (workedOn === 'Hair') {
+            hairCount++;
+        } else {
+            makeupCount++;
+            hairCount++;
+        }
+
         return {
             src: url,
             width: imageSize === 'Tall' ? 3 : imageSize === 'Wide' ? 4 : 1,
@@ -43,12 +56,59 @@ const PhotoGallery = ({ photoGallery }) => {
         };
     });
 
-    const photoRenderer = useCallback(({ photo }) => {
-        return <Photos key={uniqid()} photo={photo} lightBox={openLightbox} />;
-    }, []);
+    const photoRenderer = useCallback(
+        ({ photo }) => {
+            return (
+                <Photos
+                    key={uniqid()}
+                    photo={photo}
+                    lightBox={openLightbox}
+                    filterImg={filterImg}
+                />
+            );
+        },
+        [filterImg]
+    );
 
     return (
         <section id="work" className={css.container}>
+            <div className={css.filterContainer}>
+                <ul className={css.filterInner}>
+                    <li
+                        className={css.filterItem}
+                        onClick={() => {
+                            setFilterImg('all');
+                        }}
+                    >
+                        all
+                        <sup>
+                            <small>{photoGallery.length}</small>
+                        </sup>
+                    </li>
+                    <li
+                        className={css.filterItem}
+                        onClick={() => {
+                            setFilterImg('makeup');
+                        }}
+                    >
+                        makeup
+                        <sup>
+                            <small>{makeupCount}</small>
+                        </sup>
+                    </li>
+                    <li
+                        className={css.filterItem}
+                        onClick={() => {
+                            setFilterImg('hair');
+                        }}
+                    >
+                        hair
+                        <sup>
+                            <small>{hairCount}</small>
+                        </sup>
+                    </li>
+                </ul>
+            </div>
             <Gallery photos={photoArr} renderImage={photoRenderer} />
             <ModalGateway>
                 {viewerIsOpen ? (

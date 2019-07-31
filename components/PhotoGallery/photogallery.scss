@@ -1,6 +1,58 @@
 .header {
     padding: 25px 0;
+    font-weight: 300;
     text-align: center;
     text-transform: uppercase;
-    font-weight: 300;
+}
+
+.filterContainer {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0 25px;
+    padding-top: 25px;
+
+    @media (min-width: 480px) {
+        margin: 25px 0 70px;
+        padding-top: 50px;
+    }
+}
+
+.filterInner {
+    padding: 0 15px;
+    white-space: nowrap;
+}
+
+.filterItem {
+    display: inline-block;
+    cursor: pointer;
+    margin: 5px 30px;
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    position: relative;
+
+    &::before {
+        content: '';
+        width: 0;
+        height: 1px;
+        background-color: rgba(#000, 0.55);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: all 0.2s ease-out;
+    }
+
+    &:hover::before,
+    &:focus::before,
+    &.active::before {
+        width: 75%;
+    }
+
+    sup {
+        color: #999;
+        font-size: 80%;
+        letter-spacing: 3px;
+        top: -0.7em;
+        left: 5px;
+    }
 }
