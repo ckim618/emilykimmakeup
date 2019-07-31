@@ -25,6 +25,7 @@ export default class MyDocument extends Document {
                     <NextScript />
                     <form
                         name="contact-form"
+                        method="POST"
                         action="post"
                         data-netlify-="true"
                         netlify
