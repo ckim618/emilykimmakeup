@@ -30,7 +30,7 @@ const Home = ({ page }) => {
             <Hero img={url} header={heroText} subHeader={heroSubText} />
             <PhotoGallery photoGallery={photoGallery} />
             <Contact phone={phoneNumber} email={email} />
-            {/* <ContactForm /> */}
+            <ContactForm />
         </Layout>
     );
 };
