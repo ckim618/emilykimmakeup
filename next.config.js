@@ -22,11 +22,4 @@ module.exports = withSass({
         });
         return config;
     },
-
-    // async exportPathMap() {
-    //     const paths = {
-    //         '/': { page: '/' },
-    //     };
-    //     return paths;
-    // },
 });
