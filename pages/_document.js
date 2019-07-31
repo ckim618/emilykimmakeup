@@ -25,7 +25,7 @@ export default class MyDocument extends Document {
                     <NextScript />
                     <form
                         name="contact-form"
-                        method="post"
+                        action="post"
                         data-netlify-="true"
                         netlify
                         data-netlify-honeypot="bot-field"
