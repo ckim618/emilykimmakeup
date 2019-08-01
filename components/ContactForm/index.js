@@ -48,7 +48,7 @@ class ContactForm extends React.Component {
             <NetlifyForm name="contact-form" onSubmit={this.handleSubmit}>
                 {({ loading, error, success }) => (
                     <div>
-                        {!loading && !success && (
+                        {!loading && (
                             <div className={css.form}>
                                 <div className={css.inner}>
                                     <input
