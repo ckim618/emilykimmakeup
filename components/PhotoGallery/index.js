@@ -76,7 +76,8 @@ const PhotoGallery = ({ photoGallery }) => {
                 <ul className={css.filterInner}>
                     <li
                         className={css.filterItem}
-                        onClick={() => {
+                        onClick={e => {
+                            e.preventDefault();
                             setFilterImg('all');
                         }}
                     >
@@ -87,7 +88,8 @@ const PhotoGallery = ({ photoGallery }) => {
                     </li>
                     <li
                         className={css.filterItem}
-                        onClick={() => {
+                        onClick={e => {
+                            e.preventDefault();
                             setFilterImg('makeup');
                         }}
                     >
@@ -98,7 +100,8 @@ const PhotoGallery = ({ photoGallery }) => {
                     </li>
                     <li
                         className={css.filterItem}
-                        onClick={() => {
+                        onClick={e => {
+                            e.preventDefault();
                             setFilterImg('hair');
                         }}
                     >
