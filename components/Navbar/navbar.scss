@@ -42,9 +42,11 @@
             transition: all 0.2s ease-out;
         }
 
-        &:hover::before,
-        &:focus::before {
-            width: 100%;
+        @media (min-width: 480px) {
+            &:hover::before,
+            &:focus::before {
+                width: 100%;
+            }
         }
     }
 }
