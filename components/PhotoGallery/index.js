@@ -114,7 +114,7 @@ const PhotoGallery = ({ photoGallery }) => {
             </div>
             <Gallery photos={photoArr} renderImage={photoRenderer} />
             <ModalGateway>
-                {viewerIsOpen ? (
+                {viewerIsOpen && (
                     <Modal onClose={closeLightbox}>
                         <Carousel
                             currentIndex={currentImage}
@@ -125,7 +125,7 @@ const PhotoGallery = ({ photoGallery }) => {
                             }))}
                         />
                     </Modal>
-                ) : null}
+                )}
             </ModalGateway>
         </section>
     );

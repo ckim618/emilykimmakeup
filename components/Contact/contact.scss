@@ -24,8 +24,10 @@
     font-size: rem(18px);
     transition: all 0.3s;
 
-    &:hover,
-    &:focus {
-        color: rgba(17, 17, 17, 1);
+    @media (min-width: 480px) {
+        &:hover,
+        &:focus {
+            color: rgba(17, 17, 17, 1);
+        }
     }
 }
