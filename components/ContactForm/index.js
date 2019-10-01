@@ -99,11 +99,7 @@ class ContactForm extends React.Component {
                                             placeholder="Message"
                                         />
                                     </p>
-                                    <button
-                                        on
-                                        className={css.btn}
-                                        type="submit"
-                                    >
+                                    <button className={css.btn} type="submit">
                                         Submit
                                     </button>
                                     {loading && (
@@ -128,68 +124,6 @@ class ContactForm extends React.Component {
                     </div>
                 )}
             </NetlifyForm>
-            // <form
-            //     name="contact-form,"
-            //     method="post"
-            //     data-netlify-="true"
-            //     netlify-honeypot="bot-field"
-            //     data-netlify-honeypot="bot-field"
-            //     onSubmit={this.handleSubmit}
-            //     className={css.form}
-            // >
-            //     <input type="hidden" name="form-name" value="contact" />
-            //     <div className={css.inner}>
-            //         <p className={css.inputContainer}>
-            //             <input
-            //                 className={css.input}
-            //                 type="text"
-            //                 name="name"
-            //                 value={name}
-            //                 required
-            //                 onChange={this.handleChange}
-            //                 placeholder="Name"
-            //             />
-            //         </p>
-            //         <p className={css.inputContainer}>
-            //             <input
-            //                 className={css.input}
-            //                 type="email"
-            //                 name="email"
-            //                 value={email}
-            //                 required
-            //                 onChange={this.handleChange}
-            //                 placeholder="Email"
-            //             />
-            //         </p>
-            //         <p className={css.inputContainer}>
-            //             <input
-            //                 className={css.input}
-            //                 type="tel"
-            //                 name="phone"
-            //                 required
-            //                 value={phone}
-            //                 onChange={this.handleChange}
-            //                 placeholder="Phone Number"
-            //             />
-            //         </p>
-            //         <p className={css.inputContainer}>
-            //             <textarea
-            //                 className={css.input}
-            //                 rows="5"
-            //                 name="message"
-            //                 value={message}
-            //                 onChange={this.handleChange}
-            //                 placeholder="Message"
-            //             />
-            //         </p>
-            //         <button className={css.btn} type="submit">
-            //             Send
-            //         </button>
-            //         <div className={formBtnClasses}>
-            //             Thank you! I'll contact you as soon as possible!
-            //         </div>
-            //     </div>
-            // </form>
         );
     }
 }

@@ -1,11 +1,10 @@
-import { useSpring, animated } from 'react-spring';
+import Fade from 'react-reveal/Fade';
 import css from './photo.scss';
 import cc from 'classcat';
 
 const Photos = React.memo(({ photo = {}, lightBox, filterImg }) => {
     const { id, workedon } = photo;
     const worked = workedon.toLowerCase();
-    const props = useSpring({ opacity: 1, from: { opacity: 0 } });
     const classes = cc([
         css.photo,
         {
@@ -16,20 +15,22 @@ const Photos = React.memo(({ photo = {}, lightBox, filterImg }) => {
                 filterImg == 'all',
         },
     ]);
+
     return (
-        <animated.div
-            style={props}
-            className={classes}
-            {...photo}
-            onClick={() => {
-                lightBox(id);
-            }}
-        >
-            <img loading="lazy" {...photo} />
-            <div className={css.caption}>
-                <h3 className={css.title}>{worked}</h3>
+        <Fade delay={parseInt(`${id}9`)}>
+            <div
+                className={classes}
+                {...photo}
+                onClick={() => {
+                    lightBox(id);
+                }}
+            >
+                <img loading="lazy" {...photo} />
+                <div className={css.caption}>
+                    <h3 className={css.title}>{worked}</h3>
+                </div>
             </div>
-        </animated.div>
+        </Fade>
     );
 });
 
