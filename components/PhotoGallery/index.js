@@ -47,7 +47,7 @@ const PhotoGallery = ({ photoGallery }) => {
         }
 
         return {
-            src: url,
+            src: url + '?w=800',
             width: imageSize === 'Tall' ? 3 : imageSize === 'Wide' ? 4 : 1,
             height: imageSize === 'Tall' ? 4 : imageSize === 'Wide' ? 3 : 1,
             workedon: workedOn,
