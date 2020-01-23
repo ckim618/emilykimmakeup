@@ -1,4 +1,3 @@
-import Fade from 'react-reveal/Fade';
 import css from './photo.scss';
 import cc from 'classcat';
 
@@ -17,20 +16,18 @@ const Photos = React.memo(({ photo = {}, lightBox, filterImg }) => {
     ]);
 
     return (
-        <Fade delay={parseInt(`${id}9`)}>
-            <div
-                className={classes}
-                {...photo}
-                onClick={() => {
-                    lightBox(id);
-                }}
-            >
-                <img loading="lazy" {...photo} />
-                <div className={css.caption}>
-                    <h3 className={css.title}>{worked}</h3>
-                </div>
+        <div
+            className={classes}
+            {...photo}
+            onClick={() => {
+                lightBox(id);
+            }}
+        >
+            <img {...photo} />
+            <div className={css.caption}>
+                <h3 className={css.title}>{worked}</h3>
             </div>
-        </Fade>
+        </div>
     );
 });
 
