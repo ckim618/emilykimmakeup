@@ -12,11 +12,7 @@ import ContactForm from '../components/ContactForm';
 
 const Home = ({ page }) => {
     const {
-        heroBackgroundImage: {
-            fields: {
-                file: { url },
-            },
-        },
+        heroBackgroundImage: { fields: { file: { url = '' } = {} } = {} } = {},
         heroText,
         heroSubText,
         photoGallery,
