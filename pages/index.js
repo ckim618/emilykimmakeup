@@ -28,7 +28,6 @@ const Home = ({ page }) => {
                     crossOrigin="anonymous"
                     src="https://polyfill.io/v3/polyfill.min.js?features=es6%2Ces7%2Ces5%2Ces2015%2Ces2016%2Ces2017"
                 />
-                <script src="http://tjcrowder.github.io/simple-snippets-console/snippet.js" />
             </Head>
             <Hero img={url} header={heroText} subHeader={heroSubText} />
             <PhotoGallery photoGallery={photoGallery} />
