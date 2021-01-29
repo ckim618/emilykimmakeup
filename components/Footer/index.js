@@ -1,6 +1,9 @@
 import css from './footer.scss';
 
 const Footer = () => {
+    const today = new Date();
+    const year = today.getFullYear();
+
     return (
         <footer className={css.footer}>
             <div className={css.inner}>
@@ -26,7 +29,8 @@ const Footer = () => {
                 </div>
                 <div className={css.row}>
                     <p className={css.copyright}>
-                        &copy; 2019 Emily Kim Makeup
+                        <span dangerouslySetInnerHTML={{ __html: '&copy;' }} />
+                        {` ${year} Emily Kim Makeup`}
                     </p>
                 </div>
             </div>

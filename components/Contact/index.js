@@ -7,12 +7,6 @@ const Contact = ({ phone, email }) => {
         <section id="contact" className={css.container}>
             <h2 className={css.header}>For Prices and Inquiries</h2>
             <div className={css.infoContainer}>
-                Call/Text:
-                <a href={telRef} className={css.info}>
-                    {phone}
-                </a>
-            </div>
-            <div className={css.infoContainer}>
                 Email:
                 <a href={emailRef} className={css.info}>
                     {email}
