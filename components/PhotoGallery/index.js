@@ -30,7 +30,7 @@ const PhotoGallery = ({ photoGallery }) => {
                 image: { fields: { file: { url = '' } = {} } = {} } = {},
                 imageSize = '',
                 workedOn = '',
-            },
+            } = {},
         } = photo;
 
         if (workedOn === 'Makeup') {
@@ -53,7 +53,7 @@ const PhotoGallery = ({ photoGallery }) => {
     });
 
     const photoRenderer = useCallback(
-        ({ photo }) => {
+        ({ photo = {} }) => {
             return (
                 <Photos
                     key={uniqid()}
