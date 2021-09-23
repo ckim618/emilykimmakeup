@@ -14,7 +14,7 @@ const PhotoGallery = ({ photoGallery }) => {
     const [viewerIsOpen, setViewerIsOpen] = useState(false);
     const [filterImg, setFilterImg] = useState('');
 
-    const openLightbox = id => {
+    const openLightbox = (id) => {
         setCurrentImage(id);
         setViewerIsOpen(true);
     };
@@ -27,11 +27,7 @@ const PhotoGallery = ({ photoGallery }) => {
     const photoArr = photoGallery.map((photo, i) => {
         const {
             fields: {
-                image: {
-                    fields: {
-                        file: { url = '' },
-                    },
-                },
+                image: { fields: { file: { url = '' } = {} } = {} } = {},
                 imageSize = '',
                 workedOn = '',
             },
@@ -76,7 +72,7 @@ const PhotoGallery = ({ photoGallery }) => {
                 <ul className={css.filterInner}>
                     <li
                         className={css.filterItem}
-                        onClick={e => {
+                        onClick={(e) => {
                             e.preventDefault();
                             setFilterImg('all');
                         }}
@@ -88,7 +84,7 @@ const PhotoGallery = ({ photoGallery }) => {
                     </li>
                     <li
                         className={css.filterItem}
-                        onClick={e => {
+                        onClick={(e) => {
                             e.preventDefault();
                             setFilterImg('makeup');
                         }}
@@ -100,7 +96,7 @@ const PhotoGallery = ({ photoGallery }) => {
                     </li>
                     <li
                         className={css.filterItem}
-                        onClick={e => {
+                        onClick={(e) => {
                             e.preventDefault();
                             setFilterImg('hair');
                         }}
@@ -118,7 +114,7 @@ const PhotoGallery = ({ photoGallery }) => {
                     <Modal onClose={closeLightbox}>
                         <Carousel
                             currentIndex={currentImage}
-                            views={photoArr.map(x => ({
+                            views={photoArr.map((x) => ({
                                 ...x,
                                 srcset: x.srcSet,
                                 caption: x.title,
