@@ -24,33 +24,35 @@ const PhotoGallery = ({ photoGallery }) => {
         setViewerIsOpen(false);
     };
 
-    const photoArr = photoGallery.map((photo, i) => {
-        const {
-            fields: {
-                image: { fields: { file: { url = '' } = {} } = {} } = {},
-                imageSize = '',
-                workedOn = '',
-            } = {},
-        } = photo;
+    const photoArr = photoGallery
+        .map((photo, i) => {
+            const {
+                fields: {
+                    image: { fields: { file: { url = '' } = {} } = {} } = {},
+                    imageSize = '',
+                    workedOn = '',
+                } = {},
+            } = photo;
 
-        if (workedOn === 'Makeup') {
-            makeupCount++;
-        } else if (workedOn === 'Hair') {
-            hairCount++;
-        } else {
-            makeupCount++;
-            hairCount++;
-        }
+            if (workedOn === 'Makeup') {
+                makeupCount++;
+            } else if (workedOn === 'Hair') {
+                hairCount++;
+            } else {
+                makeupCount++;
+                hairCount++;
+            }
 
-        return {
-            src: url + '?w=800',
-            width: imageSize === 'Tall' ? 3 : imageSize === 'Wide' ? 4 : 1,
-            height: imageSize === 'Tall' ? 4 : imageSize === 'Wide' ? 3 : 1,
-            workedon: workedOn,
-            key: uniqid(),
-            id: i,
-        };
-    });
+            return {
+                src: url + '?w=800',
+                width: imageSize === 'Tall' ? 3 : imageSize === 'Wide' ? 4 : 1,
+                height: imageSize === 'Tall' ? 4 : imageSize === 'Wide' ? 3 : 1,
+                workedon: workedOn,
+                key: uniqid(),
+                id: i,
+            };
+        })
+        .filter(({ src }) => src.includes('//images'));
 
     const photoRenderer = useCallback(
         ({ photo = {} }) => {
